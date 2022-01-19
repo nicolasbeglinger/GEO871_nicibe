@@ -1,3 +1,4 @@
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
@@ -9,7 +10,7 @@ def html2text(url: str, only_alpha: bool = True) -> str:
 
     Args:
         url (str): url of the website
-        only_alpha (bool, optional): whether only alphabetic characters should be included into the 
+        only_alpha (bool, optional): whether only alphabetic characters should be included into the
         text. Defaults to True.
 
     Returns:
