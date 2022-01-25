@@ -54,6 +54,11 @@ def html2text(url: str, only_alpha: bool = True) -> str:
 
 if __name__ == "__main__":
     print(html2text(
-        url="https://www.theguardian.com/global-development/2021/dec/21/uk-accused-of-abandoning-\
-            worlds-poor-as-aid-turned-into-colonial-investment",
+        url="https://www.theguardian.com/global-development/2021/dec/21/uk-accused-of-abandoning-worlds-poor-as-aid-turned-into-colonial-investment",
         only_alpha=True))
+
+    html = urlopen(
+        "https://www.theguardian.com/global-development/2021/dec/21/uk-accused-of-abandoning-worlds-poor-as-aid-turned-into-colonial-investment").read()
+    print(
+        '\n',
+        ' '.join(BeautifulSoup(html, "html.parser").stripped_strings))
